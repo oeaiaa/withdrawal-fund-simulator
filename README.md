@@ -39,8 +39,8 @@ withdrawal-simulator/
 │   └── workflows/
 │       └── deploy.yml
 ├── src/
-│   ├── App.js
-│   └── index.js
+│   ├── App.jsx
+│   └── index.jsx
 ├── index.html
 ├── package.json
 ├── vite.config.js
