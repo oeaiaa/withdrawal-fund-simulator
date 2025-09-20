@@ -14,6 +14,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       
+    - name: 🔍 DEBUG - List all files in repository
+      run: |
+        echo "=== REPOSITORY STRUCTURE ==="
+        find . -type f -name "*.js" -o -name "*.jsx" -o -name "*.html" | sort
+        echo ""
+        echo "=== ALL FILES IN SRC DIRECTORY ==="
+        ls -la src/ || echo "src directory not found"
+        echo ""
+        echo "=== CONTENT OF index.html ==="
+        cat index.html || echo "index.html not found"
+        echo ""
+        echo "=== SEARCHING FOR ANY REFERENCES TO index.js ==="
+        grep -r "index\.js" . --exclude-dir=node_modules --exclude-dir=.git || echo "No references to index.js found"
+        
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
@@ -22,6 +36,28 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: 🔍 DEBUG - Check package.json and vite.config.js
+      run: |
+        echo "=== PACKAGE.JSON CONTENT ==="
+        cat package.json
+        echo ""
+        echo "=== VITE.CONFIG.JS CONTENT ==="
+        cat vite.config.js
+        echo ""
+        echo "=== NODE_MODULES CHECK ==="
+        ls -la node_modules/@vitejs/ || echo "Vite modules not found"
+        
+    - name: 🔍 DEBUG - Pre-build file check
+      run: |
+        echo "=== FINAL FILES BEFORE BUILD ==="
+        find src/ -name "*.js" -o -name "*.jsx" | sort
+        echo ""
+        echo "=== CONTENT OF src/index.jsx ==="
+        cat src/index.jsx || echo "src/index.jsx not found"
+        echo ""
+        echo "=== CONTENT OF src/App.jsx ==="
+        head -20 src/App.jsx || echo "src/App.jsx not found"
+        
     - name: Build
       run: npm run build
       
