@@ -314,6 +314,14 @@ const WithdrawalSimulator = () => {
             )}
           </div>
         </div>
+        
+        {/* Footer */}
+        <div className="mt-8 py-6 text-center border-t border-gray-200">
+          <p className="text-sm text-gray-500">
+            Made with ❤️ and ☕ using AI.<br />
+            Share with friends who love financial planning!
+          </p>
+        </div>
       </div>
     </div>
   );
