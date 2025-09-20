@@ -97,8 +97,8 @@ const WithdrawalSimulator = () => {
   };
 
   const formatCurrencyInput = (value) => {
-    return '
-
+    return '$' + new Intl.NumberFormat('en-US').format(value);
+  };
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
