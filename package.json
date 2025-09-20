@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Perpetual Withdrawal Fund Simulator - Financial planning tool for sustainable withdrawals",
   "private": true,
-  "homepage": "https://yourusername.github.io/withdrawal-simulator",
+  "homepage": "https://oeaiaa.github.io/withdrawal-simulator",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
