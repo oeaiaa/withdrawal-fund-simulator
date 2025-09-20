@@ -1,4 +1,4 @@
-Updated: [2025-09-20 23:02]
+Updated: [2025-09-20 23:22]
 # Perpetual Withdrawal Fund Simulator
 
 A React-based financial planning tool that simulates sustainable withdrawals from investment portfolios with inflation adjustments.
