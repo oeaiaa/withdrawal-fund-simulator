@@ -99,6 +99,10 @@ const WithdrawalSimulator = () => {
   const formatCurrencyInput = (value) => {
     return '$' + new Intl.NumberFormat('en-US').format(value);
   };
+
+  const parseFormattedNumber = (value) => {
+    return parseInt(value.replace(/[$,]/g, '')) || 0;
+  };
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
