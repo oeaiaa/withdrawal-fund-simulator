@@ -3,7 +3,7 @@
 A React-based financial planning tool that simulates sustainable withdrawals from investment portfolios with inflation adjustments.
 
 ## 🚀 Live Demo
-After deployment, your app will be available at: `https://yourusername.github.io/withdrawal-simulator`
+After deployment, your app will be available at: `https://yourusername.github.io/withdrawal-fund-simulator`
 
 ## 📊 Features
 
@@ -38,11 +38,10 @@ withdrawal-simulator/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml
-├── public/
-│   └── index.html
 ├── src/
 │   ├── App.js
 │   └── index.js
+├── index.html
 ├── package.json
 ├── vite.config.js
 └── README.md
